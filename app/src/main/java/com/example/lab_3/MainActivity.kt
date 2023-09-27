@@ -14,5 +14,8 @@ class MainActivity : AppCompatActivity() {
         val charOff = findViewById<EditText>(R.id.inputCharOff)
         val charOn = findViewById<EditText>(R.id.inputCharOn)
         val result = findViewById<EditText>(R.id.resultText)
+        buttonToResult.setOnClickListener {
+
+        }
     }
 }
