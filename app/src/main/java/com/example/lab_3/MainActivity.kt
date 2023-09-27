@@ -15,6 +15,14 @@ class MainActivity : AppCompatActivity() {
         val charOn = findViewById<EditText>(R.id.inputCharOn)
         val result = findViewById<EditText>(R.id.resultText)
         buttonToResult.setOnClickListener {
+            if (inputString.text.toString() == ""){
+                result.setText("Line not entered")
+                return@setOnClickListener
+            }
+            if (charOff.text.toString() == "" || charOn.text.toString() == ""){
+                result.setText("Replacement characters are not entered")
+                return@setOnClickListener
+            }
             val middleResult: String = inputString.text.toString().replace(charOff.text.toString()[0], charOn.text.toString()[0])
             result.setText(middleResult)
         }
